@@ -14,7 +14,7 @@ phases:
       - npm run build
   post_build:
     commands:
-      - echo "Build completed. Copying files to S3..."`
+      - echo "Build completed. Copying files to S3..."
       - aws s3 cp dist s3://dnc-frontend-12/ --recursive
       
 artifacts:
